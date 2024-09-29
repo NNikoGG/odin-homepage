@@ -1,3 +1,135 @@
-.hello {
-  color: red;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 45rem;
+  background-color: #7c73e6;
+  transform-origin: 0;
+  transform: skewY(-10deg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+header img {
+  max-width: 45rem;
+}
+
+header .about-me {
+  background-color: #9b4444;
+  padding: 1.5rem;
+  align-self: center;
+  max-width: 40%;
+}
+
+header .about-me h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header .about-me p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  word-spacing: 2px;
+}
+
+header .about-me .social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .about-me .social-icons i {
+  font-size: 1.75rem;
+  margin: 0 0.75rem;
+}
+
+header .about-me .social-icons i:hover {
+  color: rgb(218, 212, 212);
+}
+
+.profile-section {
+  flex: 1;
+  position: relative;
+  box-shadow: 0rem 0.1rem 0.5rem #333;
+}
+
+.profile-photo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.about-section {
+  color: #333;
+  background-color: #f0f0f0;
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: auto 0;
+  box-shadow: 0rem 0.1rem 0.5rem #333;
+}
+
+.about-section h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  line-height: 1.4;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  text-align: right;
+}
+
+.social-icon {
+  font-size: 1.5em;
+  color: #333;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #f0f0f0;
 }

@@ -1,9 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpack Template</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="profile-section">
+        <div class="profile-photo">
+          <img src="<%= require('./img/profile.png') %>" alt="Ashley Williams" />
+        </div>
+        <h1 class="name">Skibidi Kumar</h1>
+      </div>
+      <div class="about-section">
+        <h2>About me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </header>
+  </div>
+</body>
+
 </html>
