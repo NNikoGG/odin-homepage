@@ -13,6 +13,7 @@ module.exports = {
       title: 'Homepage',
       // template: path.resolve(__dirname, 'src', 'index.html'),
       template: './src/index.html',
+      favicon: './src/img/profile.png',
     }),
     new MiniCssExtractPlugin({
       filename: 'main.css',
