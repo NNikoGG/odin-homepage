@@ -1,8 +1,10 @@
+/* Base styles (for mobile first) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
+  font-size: 16px;
 }
 
 body::before {
@@ -10,62 +12,60 @@ body::before {
   position: absolute;
   z-index: -1;
   width: 100%;
-  height: 45rem;
+  height: 30rem;
   background-color: #7c73e6;
   transform-origin: 0;
   transform: skewY(-10deg);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
 
 .header {
   display: flex;
-  margin-top: 3rem;
-  margin-bottom: 10rem;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
   align-items: center;
-  justify-content: center;
   color: white;
 }
 
 header img {
-  max-width: 45rem;
+  max-width: 100%;
+  height: auto;
 }
 
 header .about-me {
   background-color: #9b4444;
   padding: 1.5rem;
   align-self: center;
-  max-width: 40%;
+  max-width: 100%;
+  margin-top: 2rem;
 }
 
 header .about-me h2 {
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 header .about-me p {
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
   word-spacing: 2px;
 }
 
 header .about-me .social-icons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 header .about-me .social-icons i {
-  font-size: 1.75rem;
-  margin: 0 0.75rem;
-}
-
-header .about-me .social-icons i:hover {
-  color: rgb(218, 212, 212);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
 }
 
 .profile-section {
@@ -131,7 +131,7 @@ header .about-me .social-icons i:hover {
 }
 
 .social-icon:hover {
-  color: #f0f0f0;
+  color: #666;
 }
 
 main {
@@ -146,7 +146,7 @@ main h2 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -164,7 +164,7 @@ main h2 {
 }
 
 .card-content {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .project-header {
@@ -175,7 +175,7 @@ main h2 {
 }
 
 .project-header h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -184,8 +184,8 @@ main h2 {
 }
 
 .project-links a {
-  margin-left: 1rem;
-  font-size: 1.25rem;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
   color: #333;
 }
 
@@ -199,39 +199,27 @@ main h2 {
   line-height: 1.4;
 }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 footer {
   background-color: #7c73e6;
   color: #ffffff;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
+  flex-direction: column;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .contact-info {
   flex: 1;
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .contact-info h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -271,10 +259,11 @@ footer .social-links {
 
 .contact-image {
   flex: 1;
-  max-width: 50%;
+  max-width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .contact-image img {
@@ -283,18 +272,103 @@ footer .social-links {
   border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+/* Tablet styles */
+@media (min-width: 768px) {
+  body::before {
+    height: 35rem;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+  }
+
+  header img {
+    max-width: 50%;
+  }
+
+  header .about-me {
+    max-width: 45%;
+    margin-top: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer-content {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .contact-info,
   .contact-image {
-    max-width: 100%;
+    max-width: 48%;
   }
 
   .contact-image {
-    margin-top: 2rem;
+    margin-top: 0;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  body::before {
+    height: 45rem;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  header img {
+    max-width: 45rem;
+  }
+
+  header .about-me {
+    max-width: 40%;
+  }
+
+  header .about-me h2 {
+    font-size: 2.5rem;
+  }
+
+  header .about-me p {
+    font-size: 1.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-links a {
+    font-size: 1.25rem;
+  }
+
+  .contact-info h3 {
+    font-size: 2rem;
+  }
+
+  .contact-info p,
+  .contact-info address {
+    font-size: 1rem;
+  }
+
+  footer {
+    display: flex;
     justify-content: center;
   }
 }
