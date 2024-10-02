@@ -210,3 +210,91 @@ main h2 {
     grid-template-columns: 1fr;
   }
 }
+
+footer {
+  background-color: #7c73e6;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.contact-info address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.contact-details {
+  margin-bottom: 1rem;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact-details i {
+  margin-right: 0.5rem;
+}
+
+footer .social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.contact-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-image {
+    max-width: 100%;
+  }
+
+  .contact-image {
+    margin-top: 2rem;
+    justify-content: center;
+  }
+}
